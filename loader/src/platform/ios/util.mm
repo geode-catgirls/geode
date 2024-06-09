@@ -97,16 +97,12 @@ namespace {
     }
 }
 
-ghc::filesystem::path dirs::getGameDir() {
-    return getBaseDir() / "game";
+std::filesystem::path dirs::getGameDir() {
+    return std::filesystem::current_path();
 }
 
-ghc::filesystem::path dirs::getModRuntimeDir() {
-    return dirs::getGeodeDir() / "unzipped";
-}
-
-ghc::filesystem::path dirs::getSaveDir() {
-    return getBaseDir() / "save";
+std::filesystem::path dirs::getSaveDir() {
+    return weaklyCanonical(CCFileUtils::sharedFileUtils()->getWritablePath().c_str());
 }
 
 bool geode::utils::permission::getPermissionStatus(Permission permission) {
