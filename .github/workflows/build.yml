@@ -247,8 +247,6 @@ jobs:
 
     - name: Setup CLI
       uses: geode-sdk/cli/.github/actions/setup@main
-      with:
-        host: mac
 
     - name: Configure
       run: >
