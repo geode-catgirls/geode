@@ -1,3 +1,8 @@
+# Geode on iOS development is discontinued.
+
+Due to actions by one of our ex-team members, we have decided to not continue porting.
+Sorry.
+
 <p align="center">
 	<img src="/title.png" />
 	<h3 align="center">
